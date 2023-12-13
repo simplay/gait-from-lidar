@@ -2,6 +2,8 @@
 
 Repository for the MDPI Sensors 2023 paper: A Transferable Lidar-based Method to Conduct Contactless Assessments of Gait Parameters in Different Home-like Environments
 
+![Alt Text](example_feet_tracking.gif)
+
 ## Main Authors
 
 + Lena C. Bruhin
