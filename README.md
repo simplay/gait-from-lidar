@@ -9,11 +9,19 @@ Repository for the MDPI Sensors 2023 paper: A Transferable Lidar-based Method to
 + Lena C. Bruhin
 + Michael Single
 
+## Dataset
+
+The dataset used in the notebook `demo.ipynb` can be find at https://github.com/simplay/gait-from-lidar/releases/tag/v1.0
+Please follow the instructions listed in the release's description.
+
 ## Usage
 
 Have a look at the notebook `demo.ipynb`
 
-The complete source-code and an example dataset will be released after the paper was accepted.
+## Citation
+
+```
+```
 
 ## License
 
