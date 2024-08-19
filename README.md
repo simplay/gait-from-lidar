@@ -8,8 +8,8 @@ The open access paper can be found [here](https://www.mdpi.com/1424-8220/24/4/11
 
 ## Main Authors
 
-+ Lena C. Bruhin
-+ Michael Single
++ Lena C. Bruhin (@lbruhin)
++ Michael Single (@simplay)
 
 ## Dataset
 
