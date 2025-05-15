@@ -2,11 +2,11 @@ import os
 import json
 from itertools import groupby
 
-from skimage.io import imread, imshow
+#from skimage.io import imread, imshow
 from skimage import io
-from skimage.draw import disk
+#from skimage.draw import disk
 from skimage.morphology import (erosion, dilation, closing, opening, area_closing, area_opening)
-from skimage.color import rgb2gray
+#from skimage.color import rgb2gray
 
 from sklearn import metrics
 from sklearn.cluster import DBSCAN
@@ -256,10 +256,10 @@ class LidarPreprocessor:
         for fdx in range(number_of_images):
             row = df.iloc[fdx]
             x, y = row["x"], row["y"]
-            fig = plt.figure()
+            fig = plt.figure(figsize=(6.4, 4.8))
             plt.axis('off')
             plt.scatter(x, y, alpha=1)
-            plt.savefig(os.path.join(save_path, f"frame{fdx}.jpg"))
+            plt.savefig(os.path.join(save_path, f"frame{fdx}.png"))
             plt.close(fig)
 
         return save_path
@@ -269,7 +269,7 @@ class LidarPreprocessor:
         '''
         @param fileapth "p64/L1904940/"
         '''
-        return [io.imread(os.path.join(base_path, f"frame{idx}.jpg")) for idx in range(img_count)]
+        return [io.imread(os.path.join(base_path, f"frame{idx}.png")) for idx in range(img_count)]
 
     @staticmethod
     def remove_background_from_frames_opt(df, mask_aaa, mask_bbb):
@@ -307,7 +307,7 @@ class LidarPreprocessor:
         erodeds = []
         for idx in range(img_count):
             img = imgs[idx]
-            binary = rgb2gray(img)
+            binary = 0.2125 * img[:,:,0] + 0.7154 * img[:,:,1] + 0.0721 * img[:,:,2]
             eroded = LidarPreprocessor.multi_closing(
                 binary, LidarPreprocessor.SE_RADIUS, LidarPreprocessor.STRUCTURING_ELEMENT
             )
@@ -334,7 +334,7 @@ class LidarPreprocessor:
                 max_y = np.max(y)
 
 
-        mean_erodeds = np.mean(erodeds, axis=0)
+        mean_erodeds = np.mean(erodeds, axis=0)/255.0
         T = (1 - mean_erodeds)
         T = (T > min_density) & (T < max_density)
 
