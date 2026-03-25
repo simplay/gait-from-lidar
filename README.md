@@ -16,6 +16,15 @@ The open access paper can be found [here](https://www.mdpi.com/1424-8220/24/4/11
 The dataset used in the notebook `demo.ipynb` can be find at https://github.com/simplay/gait-from-lidar/releases/tag/v1.0
 Please follow the instructions listed in the release's description.
 
+## Requirements
+
++ Python version `3.13` (Tested using version 3.13.11)
++ Pip
+
+## Installation
+
+`pip install -r requirements.txt`
+
 ## Usage
 
 Have a look at the notebook `demo.ipynb`
