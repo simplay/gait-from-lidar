@@ -2,7 +2,7 @@
 
 Repository for the MDPI Sensors 2023 paper: A Transferable Lidar-based Method to Conduct Contactless Assessments of Gait Parameters in Different Home-like Environments
 
-The open access paper can be found [here](https://www.mdpi.com/1424-8220/24/4/1172).
+The open-access paper can be found [here](https://www.mdpi.com/1424-8220/24/4/1172).
 
 ![Alt Text](example_feet_tracking.gif)
 
